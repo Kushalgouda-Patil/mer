@@ -25,5 +25,5 @@ def load_model_weights(model_path):
     return model
 
 if __name__ == '__main__':
-    model = load_model_weights('model.h5')
+    model = load_model_weights('./models/model.h5')
     model.save('face.h5')

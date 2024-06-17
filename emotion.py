@@ -13,6 +13,7 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 all_pred=[]
 from moviepy.editor import VideoFileClip
 from audio import speechEmotionRecognition
+from tensorflow.keras.models import load_model
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--mode",help="display")
@@ -61,7 +62,7 @@ def load_model_weights(model_path):
 
 if mode == "display":
     
-    model=load_model_weights('model.h5')
+    model=load_model('./models/face.h5')
     # prevents openCL usage and unnecessary logging messages
     cv2.ocl.setUseOpenCL(False)
 

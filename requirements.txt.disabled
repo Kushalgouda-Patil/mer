@@ -63,7 +63,12 @@ scipy==1.13.0
 six==1.16.0
 soundfile==0.12.1
 soxr==0.3.7
-tensorflow
+tensorboard==2.9.1
+tensorboard-data-server==0.6.1
+tensorboard-plugin-wit==1.8.1
+tensorflow==2.9.3
+tensorflow-estimator==2.9.0
+tensorflow-io-gcs-filesystem==0.37.0
 termcolor==2.4.0
 threadpoolctl==3.5.0
 tqdm==4.66.4

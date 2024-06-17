@@ -92,6 +92,7 @@ if mode == "display":
             cv2.rectangle(frame, (x, y-50), (x+w, y+h+10), (255, 0, 0), 2)
             roi_gray = gray[y:y + h, x:x + w]
             cropped_img = np.expand_dims(np.expand_dims(cv2.resize(roi_gray, (48, 48)), -1), 0)
+            print(cropped_img)
             prediction = model.predict(cropped_img)
             all_pred.append(prediction)
             maxindex = int(np.argmax(prediction))

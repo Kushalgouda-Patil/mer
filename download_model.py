@@ -22,8 +22,9 @@ def load_model_weights(model_path):
     model.add(Dropout(0.5))
     model.add(Dense(7, activation='softmax'))
     model.load_weights(model_path)
+    model.compile(loss='categorical_crossentropy',optimizer=Adam(lr=0.0001, decay=1e-6),metrics=['accuracy'])
     return model
 
 if __name__ == '__main__':
-    model = load_model_weights('model.h5')
-    model.save('face.h5')
+    model = load_model_weights('./models/model.h5')
+    model.save('./models/face2.h5')

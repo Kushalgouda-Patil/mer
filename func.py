@@ -45,7 +45,7 @@ def extract_audio(video_path, audio_path='./extracted_audio/a.mp3'):
     video.close()
     print(f"Audio extracted and saved to {audio_path}")
 def detect_emotion_func(video_path):
-    model.load_weights('model.h5')
+    model.load_weights('./models/model.h5')
     cv2.ocl.setUseOpenCL(False)
 
     # dictionary which assigns each label an emotion (alphabetical order)

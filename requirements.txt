@@ -11,7 +11,7 @@ cycler==0.12.1
 decorator==4.4.2
 distlib==0.3.8
 filelock==3.13.1
-flatbuffers==1.12
+flatbuffers
 fonttools==4.51.0
 gast==0.4.0
 google-auth==2.29.0
